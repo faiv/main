@@ -3,7 +3,7 @@ set -x
 # script to loop through all hogans heroes episodes
 
 #path
-folder=/run/user/1000/gvfs/smb-share\:server\=192.168.23.23\,share\=storage/Videos/Series/HogansHeroes
+folder=/user/folder/to/files
 number=$1
 
 
@@ -23,7 +23,6 @@ while [ $count -le $number ]
 		fi
 
 		last=$(head -n 1 list)
-		#echo $last
 
 		file=$folder/Season_*/$last
 		vlc --fullscreen $file vlc://quit
